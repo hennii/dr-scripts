@@ -79,7 +79,8 @@ module API
 
   module Client
     def self.api_port
-      File.open("#{File.dirname(__FILE__)}/../../api.ini", 'r') do |inFile|
+      file_path = "#{File.dirname(__FILE__)}/../../";
+      File.open("#{File.expand_path("api.ini", file_path)}", 'r') do |inFile|
         inFile.each_line do |line|
           return line.partition('=').last.to_i if line.start_with? "port"
         end
