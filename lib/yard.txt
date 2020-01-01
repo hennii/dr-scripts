@@ -1,0 +1,6 @@
+yardoc --no-private --protected .
+
+yardoc --no-private --protected main.rb
+yardoc --no-private --protected models.rb
+yardoc --no-private --protected observer.rb
+yardoc --no-private --protected text.rb
